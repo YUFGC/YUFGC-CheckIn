@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+            <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/themes/smoothness/jquery-ui.css" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+            <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js" crossorigin="anonymous" referrerpolicy="no-referrer" ></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    
+    <!--<script>
+    function day_of_week() {
+    var weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+    var d = document.getElementById('date').valueAsDate;
+    var n = d.getUTCDay()
+    document.getElementById("output").innerHTML = weekday[n];
+    }
+
+    </script>-->
+        
+    <title>Weekly Check-In Form</title>
+
+</head>
+
+<body>
+    <div class="container">
+        <h1>Weekly Check-In</h1>
+        <form id="checkinForm"
+            action="https://docs.google.com/forms/d/e/1FAIpQLSdu2UmJ48q1kKL07vF1g8dJQ_0yJm84BANTj3J7UPTSXP4OUQ/formResponse"
+            method="post" target="_blank">
+
+            <div class="group">
+                <label for="date">Date of the meeting:</label>
+                <input type="date" name="entry.981729855" id="date" required>
+            </div>
+
+            <div class="group">
+                <label for="name">Name (Full and Preferred):</label>
+                <input type="text" name="entry.2094344317" id="name" required="">
+            </div>
+
+            <div class="group">
+                <label for="yesno">Are you a York Student?</label><br>
+                <div class="horizontal-table">
+                    <input type="radio" id="Yes" name="entry.1199929865" value="Yes">
+                    <label for="Yes">Yes</label>
+                </div>
+                <div class="horizontal-table">
+                    <input type="radio" id="No" name="entry.1199929865" value="No">
+                    <label for="No">No</label>
+                </div>
+            </div>
+
+            <div class="group">
+                <label for="DiscName">Discord Name:</label>
+                <input type="text" name="entry.190013640" id="DiscName" required=""><br>
+            </div>
+
+            <div class="group">
+                <label for="info">Contact Info:</label>
+                <input type="text" name="entry.2040928741" id="info" required=""><br>
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('checkinForm').onsubmit = function () {
+            alert('Your check-in has been submitted!');
+        };
+    </script>
+
+
+
+</body>
+
+</html>
